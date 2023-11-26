@@ -6,5 +6,9 @@ to install dependencies run:
 
 then to start run: 
  npm start
+
+
+ you can install it itch.io also with this link:
  
+ https://savagebro69.itch.io/simple-flashcards
 

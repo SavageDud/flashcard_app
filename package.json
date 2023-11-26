@@ -1,0 +1,35 @@
+{
+  "name": "simple_flashcards",
+  "version": "1.0.0",
+  "description": "flashcard",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist" : "electron-builder"
+  },
+  "author": "Next V studio",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^26.1.0"
+  },
+  "dependencies": {
+    "electron-packager": "^17.1.2",
+    "file-system": "^1.2.2"
+  },
+  "build": {
+    "appId": "simple_flashcards.NEXT_V_studio.version1-0.",
+    "productName": "simple_flashcards",
+    "artifactName" : "${productName}${version}.${ext}",
+    "target": "msi",
+    "directories" : {
+       "output": "build"
+    },
+    "win": {
+      "target": "msi"
+    },
+    "msi" : {
+      "oneClick" : true,
+      "perMachine" : false
+    }
+  }
+}

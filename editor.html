@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    
+       .main_contain{
+           
+           border: 1px  solid black;
+           padding-bottom: 30px;
+           display: block;
+           
+           padding-top: 1vh;
+           margin-top: 2vh;
+           z-index: 1;
+           border-radius: 10px;
+           background-color: #FFFFFF  ;
+       }
+       body{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 0;
+          padding: 0 0;
+          width: 95.5vw;
+          overflow-x: hidden;
+         
+          background: linear-gradient(45deg  , #D2D3D9 24.9%, #EBEBF2 25%, #EBEBF2 34.9%, #D2D3D9 35%, #D2D3D9 49.9%, #EBEBF2 50% , #EBEBF2 64.9% , #D2D3D9 65%, #D2D3D9 84.99% , #EBEBF2 85% );
+          font-family: Verdana, sans-serif;
+       }
+
+       .background_shape1 {
+        position: absolute;
+        border-radius: 50%;
+        width: 30vw;
+        bottom: 2vh;
+        left: 1vw;
+        height: 30vw;
+        z-index: -1;
+        background-color: #051026;
+        
+       }
+       
+       .background_shape2 {
+
+        position: absolute;
+        
+        
+        width: 0;
+	      height: 0;
+	      border-left: 20vh solid transparent;
+	      border-right: 20vh solid transparent;
+	      border-top: 40vh solid #051026;
+
+
+        bottom: 59vh;
+        left: 80vw;
+        
+        z-index: -1;
+
+       }
+
+       .background_shape3 {
+
+        position: absolute;
+
+        height: 15vw;
+        width: 15vw;
+        bottom: 5vw;
+        left: 80vw;
+        background-color: #051026;
+        
+        z-index: -1;
+
+       }
+
+
+
+       .sub_container{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 10px;
+          width: 100%;
+          margin : 0 auto ;
+       }
+       #float_left{
+        float: left;
+       
+        
+       }
+       .display_left { 
+         
+         float: left;
+         margin-right: 60%;
+       }
+       #align1 { 
+        margin-right: 56%;
+       }
+       .overlay_text { 
+        height: 100%;
+        padding-bottom: 1vh;
+        padding-top: 1vh;
+        margin-top: 3vh;
+        font-size: 1vw;
+        margin-right: 5px;
+        display: flex;
+         justify-content: center;
+           align-items: center;
+
+       }
+       #top_left_subcontain {
+         
+         max-width: 50%;
+         float: left;
+         margin-left: 10px;
+         
+       }
+       #top_right_subcontainer {
+         max-width: 50%;
+         float: right;
+         position: relative;
+         right: -35%;
+       }
+       #Header1_container {
+        background-color: #021F59;
+       }
+       .Edit_mode_header {
+         background-color: #011640;
+         color: white;
+         height: 30px;
+         width: 100px;
+         text-align: center;
+         padding-top: 10px;
+         border-radius: 10px;
+       }
+       .row { 
+        content: "";
+        display: table;
+        clear: both;   
+       }
+       #display_flex{
+         display: flex;
+         
+       }
+       .column {
+        float: left;
+        max-width: 31vw;
+        min-width: 20vw;
+        font-size: 15px;
+        border: 2px solid #7D828C;
+        background-color: #FFFFFF;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        border-radius: 8px;
+        padding-bottom: 10px;
+       }
+       
+       
+       #top_center_collum { 
+        width: 60vw;
+        height: 5vh;
+        margin-bottom: 2vh;
+       }
+       #top_right_collum {
+        display: flex;
+        justify-content: flex-end;
+
+        padding-left: auto;
+       }
+
+       #top_center_collum {
+         width: 60vw;
+       }
+       #mid_left_collum {
+         padding-left: 10px;
+         padding-top: 60vh;
+
+         height: 10vh;
+         display: block;
+         
+       }
+       
+       #mid_center_collum {
+        width: 60vw;
+        height: 70vh;
+       }
+       #mid_right_collum{
+         padding-left: 10px;
+         padding-top: 55vh;
+
+         height: 15vh;
+         display: block;
+       }
+       .bottom_left {
+         position: relative;
+         float: left;
+         height: 5vw;
+         
+         margin-right: 10px;
+         
+       }
+       .bottom_right { 
+          position: relative;
+          right: -70%;
+       }
+       .bottom_right .simple_button{
+        height: 1vh;
+        padding-bottom: 1vh;
+         padding-top: 1vh;
+         margin-top: 1vh;
+       }
+       .bottom_left .simple_button {
+        height: 1vh;
+        padding-bottom: 1vh;
+        padding-top: 1vh;
+        margin-top: 1vh;
+       }
+       .Main_overlay .simple_button{
+        height: 2vh;
+        padding-bottom: 1vh;
+        padding-top: 1vh;
+        margin-top: 1vh;
+       }
+       .simple_button {
+         background-color: #0B2AD9  ;
+         color: #FFFFFF;
+         width: 5vw;
+         
+         font-size: 1vw;
+         height: 4vh;
+         
+         display: flex;
+         padding-bottom: 10px;
+         padding-top: 10px;
+         text-align: center;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+         margin-top: 5px;
+         margin-right: 10px;
+         border-radius: 8px;
+         border: 1px , solid ,#0B2AD9;
+         border-color: #0B2AD9;
+         border-style: solid;
+         text-align: center;
+       }
+       .simple_button:active{
+        background-color: #bde0fe;
+        color: #03045e;
+       }
+       .edit_name_buttom{
+        background-color: #0B2AD9  ;
+         color: #FFFFFF;
+         width: 5vw;
+         
+         font-size: 1vw;
+         height: 4vh;
+         
+         display: flex;
+         padding-bottom: 10px;
+         padding-top: 10px;
+         text-align: center;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+         margin-top: 5px;
+         margin-right: 10px;
+         border-radius: 8px;
+         border: 1px , solid ,#0B2AD9;
+         border-color: #0B2AD9;
+         border-style: solid;
+         text-align: center;
+       }
+       .edit_name_buttom:active{
+        background-color: #bde0fe;
+        color: #03045e;
+       }
+       #collumn25_percent {
+          width: 19vw;
+       } 
+       #collumn50_percent {
+          width: 60vw;
+       }
+       .Main_display_editor {
+          width: 80%;
+          height: 68vh;
+          border: 1px solid black;
+          border-radius: 5px;
+          margin-top: 10px;
+          transition: 0.2s;
+          background-color: white;
+          color: black;
+       }
+       
+       #next_button:active {
+          background-color: black ;
+          color: white;
+       }
+       #prev_button:active {
+          background-color: black ;
+          color: white;
+       }
+       #flip_button:active {
+          background-color: black ;
+          color: white;
+       }
+       .Main_display_editor_back {
+          transition: 0.2s;
+          background-color: black;
+          color: white;
+          width: 80%;
+          height: 68vh;
+          border: 1px solid white;
+          border-radius: 5px;
+          margin-top: 10px;
+       }
+       .text_zone {
+         width: 100%;
+         height: 100%;
+         word-wrap: break-word;
+         overflow: break-word;
+       }
+       .Main_display_editor_back .text_zone {
+         background-color: black;
+         color: white;
+       }
+       .Main_overlay {
+         position: fixed; /* Sit on top of the page content */
+         display: block; /* Hidden by default */
+         width: 100%; /* Full width (cover the whole page) */
+         height: 100%; /* Full height (cover the whole page) */
+         background-color: rgba(0, 0, 0 , 0.1); /* Black background with opacity */
+         z-index: 0; /* Specify a stack order in case you're using a different order for other elements */
+         opacity: 0;
+         top:-200vh;
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+       }
+       @keyframes fadeInd{
+        from {opacity: 0;top:0;}
+         to {opacity: 1;top:0;}
+       }
+       @keyframes fadeOut{
+        0%{opacity: 1;top:0;}
+        99%{opacity: 0.01;top:0;}
+         100%{opacity: 0; top:-200vh;}
+       }
+       .Overlay_content {
+        
+         position:absolute;
+         display: block; /* Hidden by default */
+         width: 70vw; /* Full width (cover the whole page) */
+         height: 80vh; /* Full height (cover the whole page) */
+         top: 10vh;
+         border-radius: 15px;
+         left:5vw;
+         bottom: 90vh;
+         background-color: #FFFFFF; /* Black background with opacity */
+         z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+         cursor: pointer; /* Add a pointer on hover */
+         padding-bottom: 2vh;
+         top : -50vh;
+         opacity: 0;
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+         
+       }
+
+       @keyframes close_Overlay_content {
+         0% {opacity: 1;top : 50px;}
+         50% {opacity: 0;}
+         100% {top : -50vh;opacity: 0;}
+       }
+       @keyframes Overlay_content {
+         0% {opacity: 0;top : -50vh;}
+         100% {top : 50px;opacity: 1;}
+       }
+       .Overlay_top_container {
+         height: 60%;
+         padding-left: 2vw;
+         padding-right: 2vw;
+         margin: 0px 10px;
+         width: 100%;
+       }
+
+       .line_seperator{
+        width: 96%;
+        margin-left: 2%;
+        height: 1px;
+        background-color: black;
+       }
+       .Overlay_bottom_container {
+
+         min-height: 20%;
+         max-height: 30%;
+         margin: 0px 10px;
+         width: 100%;
+         display: flex;
+         
+       }
+       .Overlay_bottom_left {
+         padding-top: 20vh;
+        
+         width: 50%;
+       }
+       .Overlay_bottom_right {
+         padding-top:  15vh;
+         width: 50%;
+         margin-right: 10px;
+         display: flex;
+         justify-content: right;
+       }
+       
+       .Sub_Overlay_bottom_right {
+          padding-top: auto;
+       }
+       #delete_bttn {
+         background-color: red;
+         color : white;
+         border-color: #FFBBBB;
+         
+       }
+       #exit_bttn {
+         background-color: red;
+         color : white;
+         border-color: #FFBBBB;
+       }
+
+
+
+       .Big_Overlay_ {
+        width: 130vw;
+        background-color: black;
+        height: 100vh;
+        position: absolute;
+        top:0;
+        animation-name: rool_out ;
+        animation-duration: 2.5s ;
+        animation-fill-mode: forwards;
+        opacity: 1;
+        z-index: 2;
+       }
+       @keyframes rool_out {
+         0% {top:0;opacity: 1;}
+         100% {top : -200vh;opacity: 0;}
+       }
+
+       .Big_Overlay_Exit {
+        width: 140vw;
+        background-color: black;
+        height: 100vh;
+        position: absolute;
+        top:-100vh;
+        animation-name: rool_in ;
+        animation-duration: 1s ;
+        animation-fill-mode: forwards;
+        opacity: 0;
+        z-index: 3;
+       }
+       @keyframes rool_in {
+         0% {top:-100vh;opacity: 0;}
+         100% {top : 0;opacity: 1;}
+       }
+
+
+       #display_box { 
+         background-color: #BBBBBB;
+       }
+       .color_input_option { 
+         margin-top: 1vh;
+         width: 5vw;
+       }
+       .previewcolor_box { 
+         border: 1px solid black;
+         border-radius: 5px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 30vw;
+         height: 20vh;
+       }
+    </style>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
+
+  </head>
+  <body>
+    
+
+
+
+
+  
+
+
+
+
+
+
+    <div class="background_shape1"></div>
+    <div class="background_shape2"></div>
+    <div class="background_shape3"></div>
+    <div id="in_n_out_animation" class="Big_Overlay_"><p>1</p></div>
+
+
+     <div id="Page_container">
+
+     
+     <div id="overlay_container">
+            <div class = 'Main_overlay' id = 'setting_overlay'>
+               <div id = 'overlay_container_main' class = 'Overlay_content'>
+                  <div class = 'Overlay_top_container'>
+            
+                      <div class = 'sub_container' id = 'float_left'>
+                        <div style="display: flex;
+                        justify-content: center;
+                          align-items: center;"><p class = 'overlay_text'>Edit color display:<p></div>
+                        <div class = 'display_left' id ='align1'><div class = 'simple_button' id = 'edit_display_color' >edit</div>
+                      </div>
+                  </div>
+            
+            
+                   
+            </div>
+            
+            <div class = 'line_seperator'></div>
+            
+            
+                <div class = 'Overlay_bottom_container'>
+                  <div class = 'Overlay_bottom_left'>
+                    <div id = 'close_settings_btn' class = 'simple_button'>close</div>
+                  </div>
+                
+                  <div class = 'Overlay_bottom_right'>
+                    <div class = 'Sub_Overlay_bottom_right'>
+                    <div id = 'exit_bttn' class = 'simple_button'>Exit</div>
+                        <div id = 'delete_bttn' class = 'simple_button'>Delete</div>
+                        </div>
+                    </div>
+            
+               </div>
+            
+            
+            
+            </div>
+      </div>
+      
+      
+
+      <div class = 'Main_overlay' id = 'color_tab'>
+        <div id = 'color_main_tab' class = 'Overlay_content'>
+           <div class = 'Overlay_top_container' style="display: flex;">
+            
+              <div class="Overlay_bottom_left" style="display: block;">
+                  <div class = 'sub_container' id = 'float_left'>
+       
+                    <div class="Overlay_bottom_left" style="padding-top: 0;">
+                      <p>background color</p>
+                    </div>
+                    <div class="Overlay_bottom_right" style="padding-top: 0;">
+                       <input id = "color_bg_input" type="text"></input>
+                    </div>
+                   </div>
+
+                   <div class = 'sub_container' id = 'float_left'>
+       
+                    <div class="Overlay_bottom_left" style="padding-top: 0;">
+                      <p>border color</p>
+                    </div>
+                    <div class="Overlay_bottom_right" style="padding-top: 0;">
+                       <input id = "border_color_input_"type="text"></input>
+                    </div>
+                    
+                   </div>
+
+                   <div class = 'sub_container' id = 'float_left'>
+                    <div class="Overlay_bottom_left" style="padding-top: 0;">
+                      <p>font color</p>
+                    </div>
+                    <div class="Overlay_bottom_right" style="padding-top: 0;">
+                       <input id = "font_color_input_" type="text"></input>
+                    </div>
+                   </div>
+
+              </div>
+              <div class="Overlay_bottom_right" style="padding-top: 0 ;">
+                <div class = 'sub_container' style="justify-content: center;align-items: center;" id = 'float_left'>
+       
+                  <div style="display: block;"><p class = 'overlay_text'>Preview<p>
+                    <div class="previewcolor_box" id = "color_preview_box"><p>Cool_stuff</p></div>
+                  </div>
+                  
+                  
+                 </div>
+              </div>
+
+
+           </div>
+     
+     <div class = 'line_seperator'></div>
+     
+         <div class = 'Overlay_bottom_container'>
+           <div class = 'Overlay_bottom_left'>
+             <div id = 'save_colors_btn' class = 'simple_button'>save</div>
+             <div id = 'close_colors_btn' class = 'simple_button'>close</div>
+           </div>
+        </div>
+     
+     
+     
+     </div>
+</div>
+
+
+
+
+
+
+    
+    </div>
+
+
+
+
+
+     <div class="main_contain">
+        
+        <div id ="display_flex"class="sub_container">
+
+
+            <div class="row">
+                 <div class="column" id="top_left_collum">
+                    <div class="sub_container" id="top_left_subcontain">
+                     <button class="simple_button" id = "save_and_exit">home</button>
+                     <button class="simple_button" id = "save_button">save</button>
+                    </div>
+                </div>
+                 <div class="column" id="top_center_collum">
+                    <div class="sub_container">
+                        <div id = "name_container"><p id = "name_holder">filename</p></div>
+                        <button class="edit_name_buttom" id = "edit_name_buttn">edit</button>
+                    </div>
+                 </div>
+                 <div class="column" id="top_right_collum">
+                  <div class="sub_container" id = "top_right_subcontainer">
+                     <button id = "open_setting_btn"class="simple_button">settings</button>
+                    </div>
+                 </div>
+            </div>
+
+           
+
+        </div>
+        <div id ="display_flex"class="sub_container">
+
+
+         <div class="row">
+              <div id="mid_left_collum" class="column">
+                 <div class="bottom_left">
+                     
+                     <div id = "add_card_btn" class="simple_button">add</div>
+                     <div id = "remove_card_btn" class="simple_button">remove</div>
+                 </div>
+             </div>
+              <div class="column" id="mid_center_collum">
+                 <div class="sub_container">
+                    <div class="Main_display_editor" id = "editor_window_main">
+
+                    </div>
+                 </div>
+              </div>
+              <div class="column" id="mid_right_collum">
+                   <div class="bottom_right">
+                     <div id ="flip_button" class="simple_button">flip</div>
+                     <div id ="next_button" class="simple_button">next</div>
+                     <div id ="prev_button" class="simple_button">prev</div>
+                     
+                  </div>
+              </div>
+         </div>
+
+        
+
+     
+     </div>
+    </div>
+    </div>
+    
+     <script src = './editor.js'></script>
+  </body>
+</html>

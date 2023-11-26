@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html>
+  
+  <head>
+    
+    <style>
+      
+       
+       
+       
+       
+      
+      .CenteredBox{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+       }
+
+
+
+
+
+       body{
+        
+         overflow-x: hidden;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+       }
+       @font-face {
+        font-family: Quicksand;
+        src: url("./fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+       }
+
+
+
+
+
+       @keyframes text_fade_in {
+         0% {opacity: 0;bottom: 50px;}
+         50% {bottom: 0px;}
+         100% {opacity: 1;bottom: 0px; }
+       }
+       .Big_Overlay_ {
+        width: 100vw;
+        background-color: black;
+        height: 100vh;
+        position: absolute;
+        top:0;
+        z-index: 1 ;
+        animation-name: rool_out ;
+        animation-duration: 2.5s ;
+        animation-fill-mode: forwards;
+        opacity: 1;
+       }
+       @keyframes rool_out {
+         0% {top:0;opacity: 1;}
+         50% {top : -100vh;}
+         100% {top : -150vh;opacity: 0;}
+       }
+
+
+
+       
+       
+       
+  
+
+   
+
+
+
+
+
+   
+      
+       
+      .close_animation { 
+        width: 100vw;
+        background-color: black;
+        height:  500vh;
+        position: absolute;
+        top : -250vh;
+        animation-name: roll_frames ;
+        animation-duration: 0.5s ;
+        z-index: 1;
+        animation-fill-mode: forwards;
+        opacity: 0;
+      }
+
+      .Header_text {
+         opacity: 0;
+         position: relative;
+         font-family: Quicksand;
+         top:-40px;
+         animation-name: element_spawn;
+         animation-duration: 1.5s;
+         animation-fill-mode: forwards;
+       }
+
+      @keyframes roll_frames {
+         0% {opacity: 0; top : -250vh;}
+         100% {opacity: 1; top : 0}
+      }
+      .Name_input {
+         border-radius: 5px;
+         width: 70%;
+         font-family: Quicksand;
+         height: 30px;
+         border: 1px solid black;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         transition: 0.5s;
+         text-align: center;
+
+         opacity: 0;
+         position: relative;
+         top:-40px;
+         animation-name: element_spawn;
+         animation-duration: 1.5s;
+         animation-delay: 1.5s;
+         animation-fill-mode: forwards;
+
+       }
+       @keyframes element_spawn {
+         0% {opacity: 0;}
+         50% {top:0;}
+         100% {opacity: 1;top:0;}
+       }
+       .Submit_button {
+        background-color: #70e000;
+        color: black;
+        margin-top: 20px;
+        width: 20vw;
+        height: 30px;
+        border-radius: 15px;
+        border: 1px , solid ,#70e000;
+        border-color: #70e000;
+        border-style: solid;
+
+        opacity: 0;
+         position: relative;
+         top:-40px;
+         animation-name: element_spawn;
+         animation-duration: 1.5s;
+         animation-delay: 2s;
+         animation-fill-mode: forwards;
+       }
+       .Submit_button:active {
+        background-color: black;
+        color: white;
+       }
+       .image_container {
+        
+        width: 60vw;
+        height: 50vh;
+        border-radius: 3px;
+        margin-right: 5px;
+        border: 3 , solid ,black;
+        border-color: rgb(0, 0, 0);
+        border-style: solid;
+       }
+       .image_tutorial { 
+         width: 100%;
+         height: 100%;
+         background-position: center center;
+        background-size: cover; 
+       }
+    </style>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
+  </head>
+  <body>
+    
+    <div id="in_n_out_animation" class="Big_Overlay_"><p>1</p></div>
+    <div>
+    <div class="CenteredBox"><p class="Header_text" style="font-size: 2vw;" >tutorial</p></div>
+    <div class="CenteredBox"><p class="Header_text">start menu tutorial:</p></div>
+    <div class="CenteredBox"><div class="image_container"><img class="image_tutorial" src = "./Static_assets/tutorial/editor8.png"></img></div></div>
+    <div class="CenteredBox" style="margin-bottom: 10vh; margin-top: 10vh;"><p class="Header_text">editor tutorial</p></div>
+    <div class="CenteredBox"><div class="image_container"><img class="image_tutorial" src = "./Static_assets/tutorial/editor7.png"></img></div></div>
+    <div class="CenteredBox"><div class="image_container"><img class="image_tutorial" src = "./Static_assets/tutorial/editor1.png"></img></div></div>
+    <div class="CenteredBox"><div class="image_container"><img class="image_tutorial" src = "./Static_assets/tutorial/editor2.png"></img></div></div>
+    <div class="CenteredBox"><div class="image_container"><img class="image_tutorial" src = "./Static_assets/tutorial/editor3.png"></img></div></div>
+    <div class="CenteredBox"><div class="image_container"><img class="image_tutorial" src = "./Static_assets/tutorial/editor4.png"></img></div></div>
+    <div class="CenteredBox"><div class="image_container"><img class="image_tutorial" src = "./Static_assets/tutorial/editor5.png"></img></div></div>
+    <div class="CenteredBox"><div class="image_container"><img class="image_tutorial" src = "./Static_assets/tutorial/editor6.png"></img></div></div>
+    <div class="CenteredBox"><button class="Submit_button" id = "submit_button">Home</button></div>
+    </div>
+    <script src = './user_manual.js'></script>
+  </body>
+</html>

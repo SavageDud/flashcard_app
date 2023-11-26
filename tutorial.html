@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    
+       .main_contain{
+           width: 60vw;
+           padding-bottom: 30px;
+           display: block;
+       }
+       @font-face {
+        font-family: Quicksand;
+        src: url("./fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+       }
+       .sub_container{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 10px;
+          
+          width: 98%;
+          margin : 0 auto ;
+       }
+       .Name_input {
+         border-radius: 5px;
+         width: 70%;
+         height: 30px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         transition: 0.5s;
+         text-align: center;
+
+         opacity: 0;
+         position: relative;
+         top:-40px;
+         animation-name: element_spawn;
+         animation-duration: 1.5s;
+         animation-delay: 1.5s;
+         animation-fill-mode: forwards;
+
+       }
+       .Name_input:focus {
+        border: 1px solid green;
+        outline: none;
+        transition: 0.5s;
+       }
+       .Submit_button {
+        background-color: #70e000;
+        color: black;
+        margin-top: 20px;
+        width: 70%;
+        height: 30px;
+        border-radius: 15px;
+        border: 1px , solid ,#70e000;;
+        border-color: #70e000;
+        border-style: solid;
+
+        opacity: 0;
+         position: relative;
+         top:-40px;
+         animation-name: element_spawn;
+         animation-duration: 1.5s;
+         animation-delay: 2s;
+         animation-fill-mode: forwards;
+       }
+       .Submit_button:active {
+        background-color: black;
+        color: white;
+       }
+       body{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: Verdana, sans-serif;
+       }
+
+       .Intro_Slide_screen {
+        width: 100vw;
+        background-color: black;
+        height: 100vh;
+        position: absolute;
+        top:0;
+        animation-name: rool_out ;
+        animation-duration: 2.5s ;
+        animation-fill-mode: forwards;
+        opacity: 1;
+        z-index: 1;
+       }
+       @keyframes rool_out {
+         0% {top:0;opacity: 1;}
+         100% {top : 200vh;opacity: 0;}
+       }
+       .Header_text {
+         opacity: 0;
+         position: relative;
+         top:-40px;
+         font-family: Quicksand;
+         animation-name: element_spawn;
+         animation-duration: 1.5s;
+         animation-fill-mode: forwards;
+       }
+       .image_container {
+        
+        width: 60vw;
+        height: 50vh;
+        border-radius: 3px;
+        margin-right: 5px;
+        border: 3 , solid ,black;
+        border-color: rgb(0, 0, 0);
+        border-style: solid;
+       }
+       .image_tutorial { 
+         width: 100%;
+         height: 100%;
+         background-position: center center;
+        background-size: cover; 
+       }
+       #welcom_text {
+         animation-delay: 0.5s;
+       }
+       #What_is_your_name_text {
+        animation-delay: 1s;
+       }
+
+       @keyframes element_spawn {
+         0% {opacity: 0;}
+         50% {top:0;}
+         100% {opacity: 1;top:0;}
+       }
+       .CenteredBox{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+       }
+    </style>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
+  </head>
+  <body>
+     
+     <div class="main_contain">
+        <div class="sub_container"><p class="Header_text" id = "welcom_text" style="font-size: 2vw; margin-top: 20vh;">Hello user</p></div>
+        <div class="sub_container"><p class="Header_text" id = "What_is_your_name_text">How can I call you</p></div>
+        <div class="sub_container"><input class="Name_input" value = "cool username" id = "name"></input></div>
+
+        <div class="CenteredBox"><p class="Header_text" style="font-size: 2vw; animation-delay: 1.1s;margin-top: 30vh;" >Intro</p></div>
+       <div class="CenteredBox"><p class="Header_text" style="font-size: 2.5vh; animation-delay: 1.2s;" >this app makes flash cards to study</p></div>
+       <div class="CenteredBox"><p class="Header_text" style="font-size: 2vw;  animation-delay: 1.3s;margin-top: 10vh;" >quick tutorial</p></div>
+    <div class="CenteredBox"><p class="Header_text" style=" animation-delay: 1.4s;">start menu tutorial:</p></div>
+    <div class="CenteredBox"><div class="image_container"><img style = "animation-delay: 1.5s;"class="image_tutorial" src = "./Static_assets/tutorial/editor8.png"></img></div></div>
+    <div class="CenteredBox" style="margin-bottom: 10vh; margin-top: 10vh;"><p class="Header_text">editor tutorial</p></div>
+    <div class="CenteredBox"><div class="image_container"><img class="image_tutorial" src = "./Static_assets/tutorial/editor7.png"></img></div></div>
+    <div class="CenteredBox"><div class="image_container"><img class="image_tutorial" src = "./Static_assets/tutorial/editor1.png"></img></div></div>
+    <div class="CenteredBox"><div class="image_container"><img class="image_tutorial" src = "./Static_assets/tutorial/editor2.png"></img></div></div>
+    <div class="CenteredBox"><div class="image_container"><img class="image_tutorial" src = "./Static_assets/tutorial/editor3.png"></img></div></div>
+    <div class="CenteredBox"><div class="image_container"><img class="image_tutorial" src = "./Static_assets/tutorial/editor4.png"></img></div></div>
+    <div class="CenteredBox"><div class="image_container"><img class="image_tutorial" src = "./Static_assets/tutorial/editor5.png"></img></div></div>
+    <div class="CenteredBox"><div class="image_container"><img class="image_tutorial" src = "./Static_assets/tutorial/editor6.png"></img></div></div>
+    <div class="CenteredBox" style="font-size: 1.5vw; "><p class="Header_text"></p></div>
+    <div class="CenteredBox" style="font-size: 1.5vw; "><p class="Header_text">
+    <div class="sub_container"><button class="Submit_button" id = "submit_button">Start</button></div>
+  </div>
+   
+   <script src = './tutorial.js'></script>
+
+
+
+
+
+
+  
+
+
+  </body>
+</html>

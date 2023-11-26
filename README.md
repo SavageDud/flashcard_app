@@ -1,7 +1,7 @@
 # flashcard_app
 the source code of my flashcard app
 
-to install dependencies run:
+to install the dependencies run:
  npm install
 
 then to start run: 
